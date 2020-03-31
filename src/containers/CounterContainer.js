@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Counter from '../components/Counter'
-import ActionTypes from '../constants/actionTypes'
-import { incrementIfOdd } from '../actions/counter'
+import Splash from '../components/Splash'
+// import ActionTypes from '../constants/actionTypes'
+// import { incrementIfOdd } from '../actions/counter'
 import { connect } from 'react-redux'
 
 class CounterContainer extends React.Component {
@@ -11,27 +11,8 @@ class CounterContainer extends React.Component {
     counter: PropTypes.number.isRequired,
   }
 
-  increment = () => {
-    this.props.dispatch({ type: ActionTypes.INCREMENT_COUNTER })
-  }
-
-  decrement = () => {
-    this.props.dispatch({ type: ActionTypes.DECREMENT_COUNTER })
-  }
-
-  incrementIfOdd = () => {
-    incrementIfOdd()
-  }
-
   render() {
-    return (
-      <Counter
-        counter={this.props.counter}
-        increment={this.increment}
-        decrement={this.decrement}
-        incrementIfOdd={this.incrementIfOdd}
-      />
-    )
+    return <Splash></Splash>
   }
 }
 

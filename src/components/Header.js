@@ -1,35 +1,58 @@
 import React from 'react'
-import logo from '../assets/logo.svg'
+// import logo from '../assets/logo.svg'
 import styled from '@emotion/styled'
-import { keyframes } from '@emotion/core'
+import styles from '../styles/styles'
 
-const rotate360 = keyframes`
-  from {
-    transform: rotate(0deg);
+const S = {}
+S.Header = styled.div`
+  background-color: ${styles.light};
+  padding: 20px;
+  padding-left: 15%;
+  padding-right: 15%;
+  width: 100%;
+  box-sizing: border-box;
+
+  color: #000;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+
+  img.logo {
+    height: 80px;
   }
-  to {
-    transform: rotate(360deg);
+
+  a {
+    text-decoration: none;
   }
 `
 
-const TopBar = styled.div`
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+S.JoinBtn = styled.div`
+  background: ${styles.dark};
   color: #fff;
+  padding: 16px;
+  padding-right: 24px;
+  padding-left: 24px;
+  border-radius: 100px;
 
-  .redux-logo {
-    animation: ${rotate360} infinite 20s linear;
-    height: 80px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
   }
 `
 
 function Header() {
   return (
-    <TopBar>
-      <img src={logo} className="redux-logo" alt="logo" />
-      <h2>Welcome to Create Redux App</h2>
-    </TopBar>
+    <S.Header>
+      {/* <img src={logo} className="logo" alt="logo" /> */}
+      <h1>Vent Builders</h1>
+      <a href="https://www.google.com">
+        <S.JoinBtn>Join Us</S.JoinBtn>
+      </a>
+    </S.Header>
   )
 }
 
