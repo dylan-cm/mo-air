@@ -57,6 +57,7 @@ S.Splash = styled.div`
 S.JoinBtn = styled.div`
   background: ${styles.light};
   color: #000;
+  margin: 24px;
   padding: 16px;
   padding-right: 24px;
   padding-left: 24px;
@@ -128,7 +129,7 @@ function Splash() {
         materials. Please click below to join our working group. After filling out the form, you will receive a link to
         our Slack where all coordination will take place. Let’s save some lives.
       </p>
-      <a href="https://www.google.com">
+      <a href="https://forms.gle/aPJ5GycCrXYGCHPT7">
         <S.JoinBtn>Join Us</S.JoinBtn>
       </a>
     </S.Splash>

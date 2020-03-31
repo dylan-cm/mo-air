@@ -49,7 +49,7 @@ function Header() {
     <S.Header>
       {/* <img src={logo} className="logo" alt="logo" /> */}
       <h1>Vent Builders</h1>
-      <a href="https://www.google.com">
+      <a href="https://forms.gle/aPJ5GycCrXYGCHPT7">
         <S.JoinBtn>Join Us</S.JoinBtn>
       </a>
     </S.Header>
